@@ -5,16 +5,16 @@ let oneEuroIs = {
 }
 
 const fromEuroToDollar = (euro) => {
-    rate = oneEuroIs.USD;
+    rate = oneEuroIs.USD; 
     return euro * rate
 }
-const fromDollarToYen = (euro) => {
-    rate = oneEuroIs.JPY;
-    return euro * rate
+const fromDollarToYen = (usd) => {
+    const euro = usd / oneEuroIs.USD
+    return euro * oneEuroIs.JPY
 }
-const fromYenToPound = (euro) => {
-    rate = oneEuroIs.GBP;
-    return euro * rate
+const fromYenToPound = (yen) => {
+    const euro = yen / oneEuroIs.JPY
+    return euro * oneEuroIs.GBP
 }
 
 // Just a console log for ourselves
